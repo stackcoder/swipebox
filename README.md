@@ -1,6 +1,7 @@
+[![Build Status](https://travis-ci.org/stackcoder/swipebox.svg?branch=master)](https://travis-ci.org/stackcoder/swipebox)
+
 Swipebox
 ================================
-
 A touchable jQuery lightbox.
 
 [View project page](http://brutaldesign.github.com/swipebox)
@@ -8,6 +9,9 @@ A touchable jQuery lightbox.
 ##What is Swipebox ?
 
 Swipebox is a jQuery "lightbox" plugin for desktop, mobile and tablet.
+
+##Changes in this fork
+- Build and deploy swipebox in the cloud by travis-ci.org
 
 ##Features
 
