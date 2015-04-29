@@ -12,6 +12,7 @@ Swipebox is a jQuery "lightbox" plugin for desktop, mobile and tablet.
 
 ##Changes in this fork
 - Build and deploy swipebox in the cloud by travis-ci.org
+- Extract title also form the alt attribute of a contained image
 
 ##Features
 
