@@ -134,7 +134,19 @@ module.exports = function(grunt) {
 			}
 		},
 
-		
+		compress: {
+			zip: {
+				options: {
+					archive: '../deploy/swipebox.zip',
+					mode: 'zip',
+				},
+				files: [
+					{ expand: true, cwd: '../', src: ['demo/**'] },
+					{ expand: true, cwd: '../', src: ['lib/**'] },
+					{ expand: true, cwd: '../', src: ['src/**'] },
+				]
+			}
+		},
 	} ); // end init config
 
 	/**
@@ -148,6 +160,20 @@ module.exports = function(grunt) {
 		'uglify',
 		'sass:demo',
 		'notify:dist'
+	] );
+
+
+	/**
+	 * Travis task
+	 */
+	grunt.registerTask( 'travis', [
+		'sass:dist',
+		'autoprefixer',
+		'cssmin',
+		'jshint',
+		'uglify',
+		'sass:demo',
+		'compress'
 	] );
 
 	/**

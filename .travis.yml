@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+  - "stable"
+before_install:
+  - cd grunt
+  - npm install -g grunt-cli
+  - gem install sass
+script:
+  - grunt travis
+deploy:
+  provider: releases
+  api-key:
+    secure: "j2V+piF/EtT+u10+xic31YkxzbkCBEA11uQU640j9lsUQyRXhtxoaDRf/gZaRyG2Bsj7lC5YZ+oAeNQELTTJ2mrm6wibBQfwuIYZSQoeV0MxqYHlZBH7mPVx+p5RGIResJZwqLgwovr4eVSblUxAam19k68CuN0FqCiQtMWzFv8="
+  file:
+    - "../deploy/swipebox.zip"
+  skip_cleanup: true
+  on:
+    tags: true
+    all_branches: true
